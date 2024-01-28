@@ -1,5 +1,7 @@
+import 'package:e_shop/core/routes/route_config.dart';
 import 'package:e_shop/core/theme/theme_data.dart';
 import 'package:e_shop/features/home/presentation/ui/home_page.dart';
+import 'package:e_shop/features/product/presentation/ui/product_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'E-Shop',
       theme: lightThemeData,
-      home: const HomePage(),
+      routeInformationProvider: EshopRouter.router.routeInformationProvider,
+          routeInformationParser: EshopRouter.router.routeInformationParser,
+          routerDelegate: EshopRouter.router.routerDelegate,
+      // home: const ProductPage(),
     );
   }
 }

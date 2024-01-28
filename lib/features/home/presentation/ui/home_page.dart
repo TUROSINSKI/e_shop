@@ -1,8 +1,10 @@
+import 'package:e_shop/core/routes/route_values.dart';
 import 'package:e_shop/core/utils/colors.dart';
 import 'package:e_shop/core/utils/constants.dart';
 import 'package:e_shop/features/home/presentation/widgets/categories.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -172,33 +174,36 @@ class _HomePageState extends State<HomePage> {
                       childAspectRatio: 0.8),
                   itemCount: 8,
                   itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            // height: 142,
-                            // width: 160,
-                            decoration: BoxDecoration(
-                                color: AppColors.secondaryColor,
-                                borderRadius: BorderRadius.circular(8)),
-                            child: Image.asset('assets/images/airPods.png'),
+                    return GestureDetector(
+                      onTap: () => GoRouter.of(context).go(RoutePaths.product),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              // height: 142,
+                              // width: 160,
+                              decoration: BoxDecoration(
+                                  color: AppColors.secondaryColor,
+                                  borderRadius: BorderRadius.circular(8)),
+                              child: Image.asset('assets/images/airPods.png'),
+                            ),
                           ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text('AirPods',
-                                style: TextStyle(
-                                    color: TextColors.accentTextColor)),
-                            Text('⭐4.9',
-                                style: TextStyle(fontWeight: FontWeight.bold))
-                          ],
-                        ),
-                        Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text('\$249.99',
-                                style: TextStyle(fontWeight: FontWeight.bold))),
-                      ],
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('AirPods',
+                                  style: TextStyle(
+                                      color: TextColors.accentTextColor)),
+                              Text('⭐4.9',
+                                  style: TextStyle(fontWeight: FontWeight.bold))
+                            ],
+                          ),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('\$249.99',
+                                  style: TextStyle(fontWeight: FontWeight.bold))),
+                        ],
+                      ),
                     );
                   }),
             ),
