@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
         actions: [
           Padding(
             padding: EdgeInsets.only(right: AppPadding.paddingSmall),
-            child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.cart)),
+            child: IconButton(onPressed: () => GoRouter.of(context).go(RoutePaths.cart), icon: Icon(CupertinoIcons.cart)),
           )
         ],
       ),

@@ -1,7 +1,5 @@
 import 'package:e_shop/core/routes/route_config.dart';
 import 'package:e_shop/core/theme/theme_data.dart';
-import 'package:e_shop/features/home/presentation/ui/home_page.dart';
-import 'package:e_shop/features/product/presentation/ui/product_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
