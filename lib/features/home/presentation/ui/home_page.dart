@@ -3,10 +3,10 @@ import 'dart:ffi';
 import 'package:e_shop/core/routes/route_values.dart';
 import 'package:e_shop/core/utils/colors.dart';
 import 'package:e_shop/core/utils/constants.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/favorites_tab.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/home_tab.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/profile_tab.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/search_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/favorites_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/home_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/profile_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/search_tab.dart';
 import 'package:e_shop/features/home/presentation/widgets/categories.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -56,20 +56,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        scrolledUnderElevation: 0.0,
-        title: Padding(
-          padding: EdgeInsets.only(left: AppPadding.paddingSmall),
-          child: const Text('Discover'),
-        ),
-        toolbarHeight: MediaQuery.of(context).size.height * 0.1,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: AppPadding.paddingSmall),
-            child: IconButton(onPressed: () => GoRouter.of(context).go(RoutePaths.cart), icon: Icon(CupertinoIcons.cart)),
-          )
-        ],
-      ),
+      // appBar: AppBar(
+      //   scrolledUnderElevation: 0.0,
+      //   title: Padding(
+      //     padding: EdgeInsets.only(left: AppPadding.paddingSmall),
+      //     child: const Text('Discover'),
+      //   ),
+      //   toolbarHeight: MediaQuery.of(context).size.height * 0.1,
+      //   actions: [
+      //     Padding(
+      //       padding: EdgeInsets.only(right: AppPadding.paddingSmall),
+      //       child: IconButton(onPressed: () => GoRouter.of(context).go(RoutePaths.cart), icon: Icon(CupertinoIcons.cart)),
+      //     )
+      //   ],
+      // ),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: SizedBox(
         height: MediaQuery.of(context).size.height * 0.1,

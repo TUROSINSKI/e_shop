@@ -1,9 +1,9 @@
 import 'package:e_shop/core/routes/route_values.dart';
 import 'package:e_shop/features/home/presentation/ui/home_page.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/favorites_tab.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/home_tab.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/profile_tab.dart';
-import 'package:e_shop/features/home/presentation/ui/tabs/search_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/favorites_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/home_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/profile_tab.dart';
+import 'package:e_shop/features/home/presentation/widgets/tabs/search_tab.dart';
 import 'package:e_shop/features/product/presentation/ui/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
