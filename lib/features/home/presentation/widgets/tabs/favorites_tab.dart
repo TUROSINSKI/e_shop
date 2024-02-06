@@ -17,7 +17,8 @@ class FavoritesTab extends StatelessWidget {
           padding: EdgeInsets.only(left: AppPadding.paddingSmall),
           child: const Text('Favorites'),
         ),
-        toolbarHeight: MediaQuery.of(context).size.height * 0.1,
+        toolbarHeight: MediaQuery.of(context).size.height * 0.05,
+        centerTitle: false,
         actions: [
           Padding(
             padding: EdgeInsets.only(right: AppPadding.paddingSmall),

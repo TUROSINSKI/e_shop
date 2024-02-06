@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
       // ),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.1,
+        height: MediaQuery.of(context).size.height * 0.12,
         child: BottomNavigationBar( 
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,

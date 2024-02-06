@@ -24,7 +24,7 @@ class _ProductPageState extends State<ProductPage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-                horizontal: AppPadding.paddingLarge, vertical: 40),
+                horizontal: AppPadding.paddingLarge, vertical: 60),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

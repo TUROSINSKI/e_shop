@@ -18,7 +18,8 @@ class SearchTab extends StatelessWidget {
             padding: EdgeInsets.only(left: AppPadding.paddingSmall),
             child: const Text('Search'),
           ),
-          toolbarHeight: MediaQuery.of(context).size.height * 0.1,
+          toolbarHeight: MediaQuery.of(context).size.height * 0.05,
+          centerTitle: false,
           actions: [
             Padding(
               padding: EdgeInsets.only(right: AppPadding.paddingSmall),
@@ -52,13 +53,16 @@ class SearchTab extends StatelessWidget {
             ),
             Expanded(
               child: ListView.separated(
-                separatorBuilder: (context, index) => const SizedBox(height: AppPadding.paddingLarge),
-                itemCount: categories.length-1,
+                separatorBuilder: (context, index) =>
+                    const SizedBox(height: AppPadding.paddingLarge),
+                itemCount: categories.length - 1,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: AppPadding.paddingLarge),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppPadding.paddingLarge),
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: AppPadding.paddingMedium),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: AppPadding.paddingMedium),
                       height: 128,
                       decoration: BoxDecoration(
                         color: Colors.amber,
@@ -66,7 +70,9 @@ class SearchTab extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          Text(categories[index+1].name, style: TextStyle(color: AppColors.mainColor, fontSize: 24))
+                          Text(categories[index + 1].name,
+                              style: TextStyle(
+                                  color: AppColors.mainColor, fontSize: 24))
                         ],
                       ),
                     ),
