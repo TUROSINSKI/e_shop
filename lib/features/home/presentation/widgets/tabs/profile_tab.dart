@@ -1,6 +1,7 @@
 import 'package:e_shop/core/routes/route_values.dart';
 import 'package:e_shop/core/utils/colors.dart';
 import 'package:e_shop/core/utils/constants.dart';
+import 'package:e_shop/features/home/presentation/widgets/profile_tab_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -23,7 +24,7 @@ class ProfileTab extends StatelessWidget {
         actions: [
           Padding(
             padding: EdgeInsets.only(right: AppPadding.paddingSmall),
-            child: IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.gear)),
+            child: IconButton(onPressed: () => GoRouter.of(context).go('/settings'), icon: Icon(CupertinoIcons.gear)),
           )
         ],
       ),
@@ -52,33 +53,6 @@ class ProfileTab extends StatelessWidget {
               ProfileTabButton(text: "Log out", radius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)), textColor: Colors.redAccent),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class ProfileTabButton extends StatelessWidget {
-  final String text;
-  final BorderRadius? radius;
-  final Color? textColor;
-  const ProfileTabButton({
-    super.key, required this.text, this.radius, this.textColor,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: AppPadding.paddingSmall),
-      child: GestureDetector(
-        child: Container(
-          width: double.maxFinite,
-          height: 40,
-          decoration: BoxDecoration(
-            color: AppColors.secondaryColor,
-            borderRadius: radius
-          ),
-          child: Center(child: Text(text, style: TextStyle(fontSize: 16, color: textColor),)),
         ),
       ),
     );

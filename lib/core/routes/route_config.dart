@@ -5,6 +5,7 @@ import 'package:e_shop/features/home/presentation/widgets/tabs/home_tab.dart';
 import 'package:e_shop/features/home/presentation/widgets/tabs/profile_tab.dart';
 import 'package:e_shop/features/home/presentation/widgets/tabs/search_tab.dart';
 import 'package:e_shop/features/product/presentation/ui/product_page.dart';
+import 'package:e_shop/features/settings/presentation/ui/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -47,6 +48,10 @@ class EshopRouter {
                   ),
                   child: child),
         ),
+      ),
+      GoRoute(
+        path: RoutePaths.settings,
+        builder: (context, state) => SettingsPage(),
       ),
     ],
   );
