@@ -23,7 +23,7 @@ class _CartPageState extends State<CartPage> {
         leading: IconButton(
             onPressed: () => GoRouter.of(context).go(RoutePaths.home),
             icon: Icon(CupertinoIcons.back)),
-        toolbarHeight: MediaQuery.of(context).size.height * 0.1,
+        toolbarHeight: MediaQuery.of(context).size.height * 0.05,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -176,7 +176,7 @@ class _CartPageState extends State<CartPage> {
                   )),
                 )
               ),
-            )
+            ),
           ],
         ),
       ),

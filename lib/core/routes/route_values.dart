@@ -3,4 +3,5 @@ class RoutePaths {
   static const product = '/product';
   static const cart = '/cart';
   static const settings = '/settings';
+  static const changePassword = '/changepassword';
 }

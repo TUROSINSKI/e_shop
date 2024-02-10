@@ -23,11 +23,14 @@ class SettingsPage extends StatelessWidget {
           Container(
             child: Padding(
               padding: const EdgeInsets.symmetric(
-                  horizontal: AppPadding.paddingLarge, vertical: AppPadding.paddingMedium),
+                  horizontal: AppPadding.paddingLarge,
+                  vertical: AppPadding.paddingMedium),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Account details', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  Text('Account details',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: AppPadding.paddingSmall),
@@ -56,23 +59,39 @@ class SettingsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SettingsButton(text: 'Change your details'),
+                  SettingsButton(
+                    text: 'Change your details',
+                    onTap: () {},
+                  ),
                   SettingsButton(
                     text: 'Change your email',
                     radius: BorderRadius.vertical(bottom: Radius.circular(8)),
+                    onTap: () {},
                   ),
                   SizedBox(height: AppPadding.paddingLarge),
-                  Text('Settings', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SettingsButton(text: 'Change your password', radius: BorderRadius.vertical(top: Radius.circular(8))),
-                  SettingsButton(text: 'App settings'),
-                  SettingsButton(text: 'Marketing consents', radius: BorderRadius.vertical(bottom: Radius.circular(8))),
+                  Text('Settings',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  SettingsButton(
+                      text: 'Change your password',
+                      radius: BorderRadius.vertical(top: Radius.circular(8)), onTap: ()=>GoRouter.of(context).go('/changepassword'),),
+                  SettingsButton(text: 'App settings', onTap: (){},),
+                  SettingsButton(
+                      text: 'Marketing consents',
+                      radius:
+                          BorderRadius.vertical(bottom: Radius.circular(8)), onTap: (){},),
                 ],
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppPadding.paddingLarge, vertical: AppPadding.paddingLarge*2),
-            child: ProfileTabButton(text: 'Delete account', radius: BorderRadius.circular(8), textColor: Colors.redAccent),
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppPadding.paddingLarge,
+                vertical: AppPadding.paddingLarge * 2),
+            child: ProfileTabButton(
+                text: 'Delete account',
+                radius: BorderRadius.circular(8),
+                textColor: Colors.redAccent),
           )
         ],
       ),
@@ -83,10 +102,12 @@ class SettingsPage extends StatelessWidget {
 class SettingsButton extends StatelessWidget {
   final String text;
   final BorderRadius? radius;
+  final Function() onTap;
   const SettingsButton({
     super.key,
     required this.text,
     this.radius,
+    required this.onTap,
   });
 
   @override
@@ -94,6 +115,7 @@ class SettingsButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: AppPadding.paddingSmall),
       child: GestureDetector(
+        onTap: onTap,
         child: Container(
           width: double.maxFinite,
           height: 40,
