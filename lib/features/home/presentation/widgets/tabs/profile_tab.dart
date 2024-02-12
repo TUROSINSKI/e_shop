@@ -1,7 +1,7 @@
 import 'package:e_shop/core/routes/route_values.dart';
 import 'package:e_shop/core/utils/colors.dart';
 import 'package:e_shop/core/utils/constants.dart';
-import 'package:e_shop/features/home/presentation/widgets/profile_tab_button.dart';
+import 'package:e_shop/features/settings/presentation/widgets/profile_tab_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 class ProfileTabButton extends StatelessWidget {
   final String text;
   final BorderRadius? radius;
+  final Color? containerColor;
   final Color? textColor;
   const ProfileTabButton({
-    super.key, required this.text, this.radius, this.textColor,
+    super.key, required this.text, this.radius, this.textColor, this.containerColor,
   });
 
   @override
@@ -19,7 +20,7 @@ class ProfileTabButton extends StatelessWidget {
           width: double.maxFinite,
           height: 40,
           decoration: BoxDecoration(
-            color: AppColors.secondaryColor,
+            color: containerColor ?? AppColors.secondaryColor,
             borderRadius: radius
           ),
           child: Center(child: Text(text, style: TextStyle(fontSize: 16, color: textColor),)),
