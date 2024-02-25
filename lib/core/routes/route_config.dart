@@ -6,7 +6,8 @@ import 'package:e_shop/features/home/presentation/widgets/tabs/home_tab.dart';
 import 'package:e_shop/features/home/presentation/widgets/tabs/profile_tab.dart';
 import 'package:e_shop/features/home/presentation/widgets/tabs/search_tab.dart';
 import 'package:e_shop/features/product/presentation/ui/product_page.dart';
-import 'package:e_shop/features/settings/presentation/ui/change_password.dart';
+import 'package:e_shop/features/settings/presentation/ui/settings_subpages/app_settings.dart';
+import 'package:e_shop/features/settings/presentation/ui/settings_subpages/change_password.dart';
 import 'package:e_shop/features/settings/presentation/ui/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -63,6 +64,10 @@ class EshopRouter {
         path: RoutePaths.changePassword,
         builder: (context, state) => ChangePassword(),
       ),
+      GoRoute(
+        path: RoutePaths.appSettings,
+        builder: (context, state) => AppSettings(),
+      )
     ],
   );
   static GoRouter get router => _router;

@@ -4,4 +4,5 @@ class RoutePaths {
   static const cart = '/cart';
   static const settings = '/settings';
   static const changePassword = '/changepassword';
+  static const appSettings = '/appsettings';
 }

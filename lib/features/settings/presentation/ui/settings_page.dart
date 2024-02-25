@@ -1,6 +1,6 @@
 import 'package:e_shop/core/utils/colors.dart';
 import 'package:e_shop/core/utils/constants.dart';
-import 'package:e_shop/features/home/presentation/widgets/profile_tab_button.dart';
+import 'package:e_shop/features/settings/presentation/widgets/profile_tab_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -75,7 +75,7 @@ class SettingsPage extends StatelessWidget {
                   SettingsButton(
                       text: 'Change your password',
                       radius: BorderRadius.vertical(top: Radius.circular(8)), onTap: ()=>GoRouter.of(context).go('/changepassword'),),
-                  SettingsButton(text: 'App settings', onTap: (){},),
+                  SettingsButton(text: 'App settings', onTap: ()=>GoRouter.of(context).go('/appsettings'),),
                   SettingsButton(
                       text: 'Marketing consents',
                       radius:
