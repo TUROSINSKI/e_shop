@@ -55,23 +55,26 @@ class _AppSettingsState extends State<AppSettings> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: AppPadding.paddingSmall),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: AppColors.secondaryColor,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppPadding.paddingSmall, vertical: AppPadding.paddingSmall),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: AppPadding.paddingSmall),
-                        child: Icon(CupertinoIcons.bell),
-                      ),
-                      Text('Notification settings'),
-                      Spacer(),
-                      Icon(CupertinoIcons.forward)
-                    ],
+              child: GestureDetector(
+                onTap: () => GoRouter.of(context).go('/notificationsettings'),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.secondaryColor,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: AppPadding.paddingSmall, vertical: AppPadding.paddingSmall),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: AppPadding.paddingSmall),
+                          child: Icon(CupertinoIcons.bell),
+                        ),
+                        Text('Notification settings'),
+                        Spacer(),
+                        Icon(CupertinoIcons.forward)
+                      ],
+                    ),
                   ),
                 ),
               ),

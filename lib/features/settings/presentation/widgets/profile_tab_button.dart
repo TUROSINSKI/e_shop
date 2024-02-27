@@ -7,8 +7,9 @@ class ProfileTabButton extends StatelessWidget {
   final BorderRadius? radius;
   final Color? containerColor;
   final Color? textColor;
+  final Function()? tap;
   const ProfileTabButton({
-    super.key, required this.text, this.radius, this.textColor, this.containerColor,
+    super.key, required this.text, this.radius, this.textColor, this.containerColor, this.tap,
   });
 
   @override
@@ -16,6 +17,7 @@ class ProfileTabButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: AppPadding.paddingSmall),
       child: GestureDetector(
+        onTap: tap,
         child: Container(
           width: double.maxFinite,
           height: 40,

@@ -6,9 +6,11 @@ import 'package:e_shop/features/home/presentation/widgets/tabs/home_tab.dart';
 import 'package:e_shop/features/home/presentation/widgets/tabs/profile_tab.dart';
 import 'package:e_shop/features/home/presentation/widgets/tabs/search_tab.dart';
 import 'package:e_shop/features/product/presentation/ui/product_page.dart';
+import 'package:e_shop/features/settings/presentation/ui/delivery_details.dart';
 import 'package:e_shop/features/settings/presentation/ui/settings_subpages/app_settings.dart';
 import 'package:e_shop/features/settings/presentation/ui/settings_subpages/change_password.dart';
 import 'package:e_shop/features/settings/presentation/ui/settings_page.dart';
+import 'package:e_shop/features/settings/presentation/ui/settings_subpages/notification_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -67,6 +69,14 @@ class EshopRouter {
       GoRoute(
         path: RoutePaths.appSettings,
         builder: (context, state) => AppSettings(),
+      ),
+      GoRoute(
+        path: RoutePaths.notificationSettings,
+        builder: (context, state) => NotificationSettigns(),
+      ),
+      GoRoute(
+        path: RoutePaths.deliveryDetails,
+        builder: (context, state) => DeliveryDetails(),
       )
     ],
   );

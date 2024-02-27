@@ -5,4 +5,6 @@ class RoutePaths {
   static const settings = '/settings';
   static const changePassword = '/changepassword';
   static const appSettings = '/appsettings';
+  static const notificationSettings = '/notificationsettings';
+  static const deliveryDetails = '/deliverydetails';
 }

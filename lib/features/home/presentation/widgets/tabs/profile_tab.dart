@@ -46,7 +46,7 @@ class ProfileTab extends StatelessWidget {
                 ),
               ),
               ProfileTabButton(text: "Purchase history", radius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8))),
-              ProfileTabButton(text: "Delivery Details"),
+              ProfileTabButton(text: "Delivery Details", tap: () => GoRouter.of(context).go('/deliverydetails'),),
               ProfileTabButton(text: "Returns", radius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8))),
               SizedBox(height: AppPadding.paddingLarge*2),
               ProfileTabButton(text: "Support", radius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)), textColor: AppColors.accentColor),
